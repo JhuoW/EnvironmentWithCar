@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/base_header_layout" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        layout="@layout/head_tab_layout" />
+
+    <AutoCompleteTextView
+        android:id="@+id/et_password"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@null"
+        android:hint="请输入详细地点"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="5.0"
+        android:textColor="#888888"
+        android:textColorHint="#888888"
+        android:textSize="15sp" 
+        android:visibility="gone"/>
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+     <Button
+         android:id="@+id/customicon"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginRight="18dp"
+         android:layout_marginTop="35dp"
+         android:visibility="gone"
+         android:background="@drawable/button_style"
+         android:text="定位当前坐标" />
+
+</RelativeLayout>
+</LinearLayout>

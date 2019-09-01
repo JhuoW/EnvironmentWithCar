@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+         >
+        
+        
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:drawablePadding="3dip"
+            android:paddingTop="10dip"
+            android:text="用户名: "
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dip"
+            android:layout_toRightOf="@id/tv"
+            android:paddingTop="10dip"
+            android:text="加载中..."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:gravity="center_vertical"
+            android:layout_alignLeft="@id/tv"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/user_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dip"
+                android:text="号码"
+                android:textColor="#000000"
+                android:textSize="14dip" />
+
+            <!-- 身份TextView -->
+
+            <TextView
+                android:id="@+id/user_authority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:paddingTop="2dip"
+                android:text="用户身份"
+                android:textColor="#000000"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/menu_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@drawable/list_divider"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/btnLayout_clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/clear_save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_bg_selector"
+            android:text="清空缓存"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/quitLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_selector"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

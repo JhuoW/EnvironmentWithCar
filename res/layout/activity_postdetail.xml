@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/base_header_layout" />
+
+    <ProgressBar
+        android:id="@+id/load_pro"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_color"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/load_pro"
+        android:background="#ffffff"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:id="@+id/ivDetailHead"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/icon_logo_nobg"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tvDetailAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:scrollbars="none" />
+
+            <ImageView
+                android:id="@+id/img_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:src="@drawable/ic_collection_normal" />
+
+            <TextView
+                android:id="@+id/tv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="收藏"
+                android:textColor="#7D7D7D"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
